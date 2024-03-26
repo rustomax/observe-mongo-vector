@@ -84,7 +84,7 @@ $ ls -lh /var/log/mongodb/*
 
 The vector agent is ran by systemd under the unprivileged user and group `vector`. This means, that it under default config, it doesn't have access to mongodb log files. There are several ways to potentially address this issue, but the quickest (although arguably not the most secure) way of doing it is by reconfiguring the vector service to run as root. You can do that by modifying `User` and `Group` settings in the vector systemd unit in `/lib/systemd/system/vector.service` to `root` instead of `vector` like so:
 
-```toml
+```ini
 [Unit]
 Description=Vector
 Documentation=https://vector.dev
