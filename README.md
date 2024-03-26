@@ -109,6 +109,13 @@ StartLimitBurst=5
 WantedBy=multi-user.target
 ```
 
+Update systemd configuration and restart vector service:
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart vector.service
+```
+
 ## Sample OPAL Pipelines
 
 ### Metrics
