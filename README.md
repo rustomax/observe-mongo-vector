@@ -1,6 +1,6 @@
 # observe-mongo-vector
 
-Instructions on setting up ingest of self-managed mongodb metrics and logs into Observe (using vector agent)
+Instructions on setting up ingest of self-managed [MongoDB](https://www.mongodb.com/) metrics and logs into Observe (using [Vector](https://vector.dev/) agent)
 
 ## Background
 
