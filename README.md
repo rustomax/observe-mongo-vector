@@ -1,10 +1,10 @@
 # observe-mongo-vector
 
-Instructions on setting up ingest of self-managed [MongoDB](https://www.mongodb.com/) metrics and logs into Observe (using [Vector](https://vector.dev/) agent)
+Instructions on setting up ingest of self-managed [MongoDB](https://www.mongodb.com/) metrics and logs into [Observe](https://observeinc.com) (using [Vector](https://vector.dev/) agent)
 
 ## Background
 
-Self-managed (installed on a Linux server) MongoDB database emits logs and metrics, which can be picked up and forwarded to Observe. In Observe, OPAL be applied to tranform incoming data into individual datasets, such as metrics, logs, SQL queries, etc.
+Self-managed MongoDB database emits logs (by default to `/var/log/mongodb/`) and exposes a metrics endpoint (by default on `mongodb://localhost:27017`). Vector agent or another forwarder can be used to collect logs and metrics and forward them to Observe. In Observe, schema-on-demand implemented in OPAL is then applied to tranform incoming data into individual datasets, such as Mongo metrics, logs, SQL queries, etc.
 
 ## Configure vector agent to forward MongoDB logs and metrics to Observe
 
